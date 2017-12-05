@@ -1,0 +1,12 @@
+[report]
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+
+    # Skip version-specific cookie lib imports
+    import http.cookies as cookielib
+    import Cookie as cookielib
+
+    # Skip version specific strings
+    string_type = str
+    string_type = basestring
