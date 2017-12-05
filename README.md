@@ -1,4 +1,4 @@
-# lambdacookie
+# lambdacookie [![Build Status](https://travis-ci.org/Jawshua/aws-lambda-cookies.svg?branch=master)](https://travis-ci.org/Jawshua/aws-lambda-cookies)
 
 Have you ever needed to set multiple cookies in a lambda response served through API Gateway? AWS doesn't natively support setting arrays as header values (which is an ongoing issue [here](https://forums.aws.amazon.com/thread.jspa?threadID=205782)), therefore we need to get creative with header naming to make it work. This library should make your life moderately easier by doing it for you.
 
