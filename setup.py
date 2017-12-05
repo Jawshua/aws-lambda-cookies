@@ -1,10 +1,10 @@
+import sys
 from setuptools import setup, find_packages
 
-install_requires = [
-]
+needs_pytest = {'pytest', 'test', 'ptr'}.intersection(sys.argv)
+setup_requires = ['pytest-runner'] if needs_pytest else []
 
-setup_requires = [
-    'pytest-runner'
+install_requires = [
 ]
 
 test_requires = [
@@ -21,8 +21,10 @@ setup(
                    AWS Lambda functions through API Gateway.""",
     author="Joshua Welsh",
     author_email="joshua.welsh@performancehorizon.com",
-    url="https://www.github.com/jawshua",
+    url="https://github.com/Jawshua/aws-lambda-cookies",
     include_package_data=True,
+    platforms=["any"],
+    license="MIT",
     package_dir={'': 'src'},
     packages=find_packages('src'),
     install_requires=install_requires,
