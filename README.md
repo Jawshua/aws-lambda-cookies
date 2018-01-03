@@ -2,6 +2,13 @@
 
 Have you ever needed to set multiple cookies in a lambda response served through API Gateway? AWS doesn't natively support setting arrays as header values (which is an ongoing issue [here](https://forums.aws.amazon.com/thread.jspa?threadID=205782)), therefore we need to get creative with header naming to make it work. This library should make your life moderately easier by doing it for you.
 
+# Installation
+
+This package is available on [pypi](https://pypi.python.org/pypi/lambdacookie). Install using pip:
+```
+pip install lambdacookie
+```
+
 # Usage
 This library is tested with a [Serverless](https://serverless.com/) deployment, but it should work with any Lambda function behind an API Gateway. Simply call `lambdacookie.headers` with a list of cookies and a dict of headers will be returned. The returned dict can be output directly from the handler.
 
